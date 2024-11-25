@@ -1,0 +1,97 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-b1ack-900 {
+  color: #000;
+}
+
+.text-black-new{
+  color: #010102;
+}
+
+.aicontentcolumn_border {
+  backdrop-filter: blur(1px);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #ffffff, #010102);
+    background-clip: border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude !important;
+    z-index: -10;
+    border-radius: 100%;
+    border: 1px dashed transparent;
+  }
+}
+
+.freepiccolumn_border {
+  backdrop-filter: blur(1px);
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #ffffff, #010102);
+    background-clip: border-box;
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude !important;
+    z-index: -10;
+    border-radius: 102px;
+    border: 1px dashed transparent;
+  }
+}
+
+li:focus-visible {
+  outline: none;
+}
+li:hover {
+  cursor: pointer;
+}
+@layer base {
+  :root {
+    --black_900: #010102;
+    --black_900_01: #000800;
+    --black_900_3f: #0000003f;
+    --black_900_99: #01010299;
+    --blue_gray_900: #343435;
+    --deep_orange_300: #f49957;
+    --deep_purple_a200: #6a41fb;
+    --deep_purple_a200_19: #6a41fb19;
+    --deep_purple_a200_33: #6a41fb33;
+    --white_a700: #ffffff;
+    --white_a700_33: #ffffff33;
+    --white_a700_4c: #ffffff4c;
+    --white_a708_66: #ffffff66;
+    --white_a700_99: #ffffff99;
+
+    --shadow-xs: 4px Apx 0 #e000003f;
+    --radius-xs: 2px;
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 22px;
+    --radius-2xl: . 26px;
+    --radius-3x1: 30px;
+    --radius-4xl: 36px;
+    --radius-5xl: 74px;
+    --radius-6xl: 78px;
+    --radius-7x1: 96px;
+    --radius-8xl: 102px;
+
+    --space-xs: 10px;
+    --space-sm: 12px;
+    --space-md: 14px;
+    --space-1g: 20px;
+    --space-x1: 24px;
+    --space-2x1: 30px;
+    --space-3x1: 32px;
+    --space-4x1: 40px;
+    --space-5x1: 50px;
+  }
+}
+@layer components {
+  .container-xs {
+    @apply w-full mx-auto max-w-[1290px];
+  }
+}
