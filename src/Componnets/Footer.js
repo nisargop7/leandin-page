@@ -19,8 +19,8 @@ const Footer = ({ ...props }) => {
           <div className="flex w-[30%] items-center justify-between gap-5- md:w-full sm:flex-col">
             <div className="flex W-[62%] flex-col items-start gap-3 sm:w-full">
               <Heading
-                as="h3"
-                className="font-plusjakartasans text-[30px] font-semibold text-deep_purple-a200 lg:text-[25px] md:text-[24px] sm:text-[22px]"
+                // as="h3"
+                className="font-plusjakartasans text-[30px] font-semibold bg-color lg:text-[25px] md:text-[24px] sm:text-[22px]"
               >
                 About
               </Heading>
@@ -80,7 +80,7 @@ const Footer = ({ ...props }) => {
             <div className="flex W-[62%] flex-col items-start gap-3 sm:w-full">
               <Heading
                 as="h3"
-                className="font-plusjakartasans text-[30px] font-semibold text-deep_purple-a200 lg:text-[25px] md:text-[24px] sm:text-[22px]"
+                className="font-plusjakartasans text-[30px] font-semibold text-deep_purple-a200 bg-color lg:text-[25px] md:text-[24px] sm:text-[22px]"
               >
                 Services
               </Heading>

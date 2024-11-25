@@ -19,32 +19,30 @@ const SecSectionPart = () => {
               <Img
                 src="images/image_sec_1.png"
                 alt="Profile Image"
-                className="h-[628px] w-[86%] rounded-[20px] object-contain"
+                className="h-[628px] w-[86%] rounded-[20px] object-contain movable-animation"
               />
             </div>
             <Img
               src="images/image_sec_1.png"
               alt="Large Portrait"
-              className="absolute bottom-0 left-0 top-0 my-auto h-[710px] w-[88%] object-contain"
+              className="absolute bottom-0 left-0 top-0 my-auto h-[710px] w-[88%] object-contain movable-animation"
             />
           </div>
           <div className="mb-6 flex w-full flex-col gap-10 self-end">
             <div className="mr-1.5 flex flex-col items-start gap-3.5 md:self-center md:md:flex md:items-center md:justify-center">
-              <Buttons className="flex h-[46px] min-₩-[190px] flex-row items-center justify-center rounded-[22px] bg-deep_purple-a200_33 px-6 text-center text-[14px] font-mediun text-b1ack-900 sm:px-4">
+              <Buttons className="flex h-[46px] min-₩-[190px] flex-row items-center justify-center rounded-[22px] bg-deep_purple-a200_33 px-6 text-center text-[14px] font-mediun text-b1ack-900 sm:px-4 moveable-button-animation">
                 Introduce optpdoce AI
               </Buttons>
               <Heading
                 size="textxl"
                 as="h2"
-                className="w-full font-plusjakartasans text-[60px] font-semibold leading-[72px] text-b1ack-900 lg:text-[51px] md:text-[40px] sm:text-[34px] "
+                className="w-full font-plusjakartasans text-[60px] font-semibold leading-[72px] text-b1ack-900 lg:text-[51px] md:text-[40px] sm:text-[34px] movable-text-animation"
               >
-                <span classNane="text-b1ack-900 ">
-                  Unlocking the Power of&nbsp;
-                </span>
+                <span className="text-b1ack-900 ">Unlocking the Power of&nbsp;</span>
                 <span className="bg-gradient2 bg-clip-text text-transparent">
                   AI for a Smarter
                 </span>
-                <span classNane="text-b1ack-900">&nbsp;Future</span>
+                <span className="text-b1ack-900">&nbsp;Future</span>
               </Heading>
             </div>
             <div className="mr-[146px] flex gap-3.5 md:mr-0 md:flex-col">
@@ -54,25 +52,22 @@ const SecSectionPart = () => {
                     key={"imageList" + index}
                     src={d.firstImage}
                     alt="First Image"
-                    className="h-[148px] w-[32%] rounded-[10px] object-contain md:w-full"
+                    className="h-[148px] w-[32%] rounded-[10px] object-contain md:w-full movable-image-animation"
                   />
                 ))}
               </Suspense>
             </div>
             <div className="mr-1.5 flex items-center gap-[30px] md:mr-0 md:flex-col">
-              <Buttons className="flex h-[52px] min-w-[118px] flex-row items-center justify-center rounded-[26px] bg-gradient px-6 text-center text-[20px] font-medium text-white-a700 lg:text-[17px] sm:px-4">
+              <Buttons className="flex h-[52px] min-w-[118px] flex-row items-center justify-center rounded-[26px] bg-gradient px-6 text-center text-[20px] font-medium text-white-a700 lg:text-[17px] sm:px-4 moveable-button-animation">
                 Try Now
               </Buttons>
               <div className="flex flex-1 items-center gap-2 md:self-stretch sm:flex-col">
                 <Img
                   src="images/img_star_1.png"
                   alt="Star Image"
-                  className="h-[32px] ₩-[6%] rounded-sm object-contain sm:w-full"
+                  className="h-[32px] ₩-[6%] rounded-sm object-contain sm:w-full movable-image-animation"
                 />
-                <p
-                  a5="p"
-                  classNamne="w-[90%] text-[18px] font-normal leading-6 text-black-new lg:text-[15px] sm:w-full"
-                >
+                <p className="w-[90%] text-[18px] font-normal leading-6 text-black-new lg:text-[15px] sm:w-full movable-text-animation">
                   It is a long established fact that a reader will be distracted
                   by the readable content of a page when looking at its layout.
                 </p>
@@ -84,4 +79,5 @@ const SecSectionPart = () => {
     </>
   );
 };
+
 export default SecSectionPart;

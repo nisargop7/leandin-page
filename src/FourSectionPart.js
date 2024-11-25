@@ -43,14 +43,12 @@ const FourSectionPart = () => {
             <Img
               src="images/image_four_1.png"
               alt="Free Image"
-              className="h-[600px] w-[42%] rounded-[30px] object-contain md:h-[400px]"
+              className="h-[600px] w-[42%] rounded-[30px] object-contain md:h-[400px] img-hover"  // Added hover class for image
             />
             <div className="flex w-[52%] flex-col items-start gap-[30px]">
-              {/* <div className="flex rounded-[22px] bg-deep_purple-a200_33 p-2.5"> */}
-              <Buttons className="flex h-[46px] min-₩-[190px] flex-row items-center justify-center rounded-[22px] bg-deep_purple-a200_33 px-6 text-center text-[14px] font-mediun text-b1ack-900 sm:px-4 md:self-center md:md:flex md:items-center md:justify-center md:mt-0">
+              <Buttons className="flex h-[46px] min-w-[190px] flex-row items-center justify-center rounded-[22px] bg-deep_purple-a200_33 px-6 text-center text-[14px] font-medium text-b1ack-900 sm:px-4 md:self-center md:flex md:items-center md:justify-center md:mt-0 button-hover">
                 Creative Approach
               </Buttons>
-              {/* </div> */}
               <div className="flex flex-col items-start gap-7 self-stretch">
                 <Heading
                   size="headings"
@@ -70,15 +68,14 @@ const FourSectionPart = () => {
                   {accordionData.map((d, i) => (
                     <AccordionItem uuid={i} key={`FAQ List${i}`}>
                       <AccordionItemHeading className="w-full">
-                        <AccordionItemButton>
+                        <AccordionItemButton className="accordion-item-header"> {/* Added hover class here */}
                           <AccordionItemState>
                             {(props) => (
                               <>
                                 <div className="flex items-center justify-between px-3.5 sm:flex-col sm:items-start sm:gap-3">
                                   <Text
-                                    // size="textlg"
                                     as="p"
-                                    className="text-[25px] font-medium leading-[38px] text-b1ack-900 lg:text-[25px] md:text-[24px] sm:text-[22px]"
+                                    className="text-[25px] font-medium leading-[38px] text-b1ack-900 lg:text-[25px] md:text-[24px] sm:text-[22px] accordion-text-hover"  // Added hover class for text
                                   >
                                     {d.questionText}
                                   </Text>

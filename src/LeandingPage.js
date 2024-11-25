@@ -1,4 +1,5 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import Img from "./Componnets/Img/Img";
 import Header from "./Componnets/Header";
 import FirstSectionPart from "./FirstSectionPart";
@@ -6,6 +7,23 @@ import SecSectionPart from "./SecSectionPart";
 import ThirdSectionPart from "./ThirdSectionPart";
 import FourSectionPart from "./FourSectionPart";
 import Footer from "./Componnets/Footer";
+
+// Helper function for animation class
+const AnimatedSection = ({ children }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: false, // Set to false to trigger on each scroll
+    threshold: 0.1, // Trigger when 10% of the element is in view
+  });
+
+  return (
+    <div
+      ref={ref}
+      className={`transition-all duration-700 ${inView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-20"}`}
+    >
+      {children}
+    </div>
+  );
+};
 
 const LeandingPage = () => {
   return (
@@ -24,21 +42,31 @@ const LeandingPage = () => {
               />
               <Header />
             </div>
-            <FirstSectionPart />
+            <AnimatedSection>
+              <FirstSectionPart />
+            </AnimatedSection>
           </div>
         </div>
       </div>
       <div className="mb-5">
-        <SecSectionPart />
+        <AnimatedSection>
+          <SecSectionPart />
+        </AnimatedSection>
       </div>
       <div className="flex w-full flex-col gap-[140px] bg-black-900 lg:gap-[140px] md:gap-[105px] sm:gap-[70px]">
-        <ThirdSectionPart />
+        <AnimatedSection>
+          <ThirdSectionPart />
+        </AnimatedSection>
       </div>
       <div>
-        <FourSectionPart />
+        <AnimatedSection>
+          <FourSectionPart />
+        </AnimatedSection>
       </div>
       <div className="flex w-full flex-col gap-[140px] bg-black-900 lg:gap-[140px] md:gap-[105px] sm:gap-[70px]">
-        <Footer />
+        <AnimatedSection>
+          <Footer />
+        </AnimatedSection>
       </div>
     </>
   );
