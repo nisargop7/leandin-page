@@ -39,6 +39,15 @@ module.exports = {
         gradient1: "linear-gradient(180deg, #a41fb,#6a41fb19)",
         gradient2: "linear-gradient(92deg, #6a41fb,#f49957)",
       },
+      animation: {
+        fadeIn: 'fadeIn 1.5s ease-in-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],
